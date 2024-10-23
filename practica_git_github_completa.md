@@ -3,7 +3,7 @@
 
 ## 1. Configuración inicial
 
-Primero, configura tu nombre, correo electrónico y editor de texto. Estos datos se utilizarán en todos tus commits.
+Primero, configura tu nombre y correo electrónico. Estos datos se utilizarán en todos tus commits.
 
 ```bash
 git config --global user.name "Tu Nombre"
@@ -87,7 +87,7 @@ Este paso lo haremos manualmente desde el Explorador de archivos.
 
    ```bash
    git add TuNombre.txt
-   git commit --amend -m "Renombrado de archivo a TuNombre.txt"
+   git commit -m "Renombrado de archivo a TuNombre.txt"
    ```
 
 ---
@@ -96,20 +96,21 @@ Este paso lo haremos manualmente desde el Explorador de archivos.
 
 ### Rama `yo++`:
 
-1. **Crear la rama `yo++`**:
+1. **Crear la rama `yo++` y luego ir a la rama**:
    - Abre la consola de Windows y crea la rama `yo++`:
 
    ```bash
-   git checkout -b yo++
+   git branch yo++
+   git checkout yo++
+
    ```
 
 2. **Modificar el archivo `TuNombre.txt` manualmente**:
    - Abre el archivo `TuNombre.txt` con el **Bloc de notas**.
-   - Escribe una descripción sobre ti, por ejemplo: "Me llamo Juan y me encanta programar en Git."
+   - Escribe una descripción sobre ti, por ejemplo: "Me llamo Iván y me encanta programar en Git."
    - Guarda el archivo y ciérralo.
 
 3. **Agregar y commitear los cambios**:
-
    En la consola, agrega el archivo al área de preparación y realiza un commit:
 
    ```bash
@@ -117,7 +118,7 @@ Este paso lo haremos manualmente desde el Explorador de archivos.
    git commit -m "Añadida descripción personal en TuNombre.txt"
    ```
 
-### Rama `taller-info`:
+### Crear la rama `taller-info`:
 
 1. **Crear la rama `taller-info`**:
    - Cambia de vuelta a la rama `master`:
@@ -129,7 +130,8 @@ Este paso lo haremos manualmente desde el Explorador de archivos.
    - Crea la nueva rama `taller-info`:
 
    ```bash
-   git checkout -b taller-info
+   git branch taller-info
+   git checkout taller-info
    ```
 
 2. **Modificar el archivo `README.md` manualmente**:
@@ -138,7 +140,6 @@ Este paso lo haremos manualmente desde el Explorador de archivos.
    - Guarda el archivo y ciérralo.
 
 3. **Agregar y commitear los cambios**:
-
    En la consola, agrega el archivo al área de preparación y realiza un commit:
 
    ```bash
@@ -152,21 +153,20 @@ Este paso lo haremos manualmente desde el Explorador de archivos.
 
 ---
 
-## 5. Merge fast-forward de ramas
+## 5. Merge (fusión) fast-forward de ramas
 
-1. Cambia a la rama `master` y realiza el merge con la rama `yo++`:
+1. Cambia a la rama `master` y realiza el merge (fusión) con la rama `yo++`:
 
    ```bash
    git checkout master
    git merge yo++
    ```
 
-Este merge será un **fast-forward**, ya que no hay otros cambios en `master` que interfieran.
+Este merge será un **fast-forward**(avance rápido), ya que no hay otros cambios en `master` que interfieran.
 
 ---
 
 ## 6. Merge recursive de ramas
-
 1. Permanece en la rama `master` y realiza el merge con la rama `taller-info`:
 
    ```bash
@@ -256,3 +256,31 @@ En este paso, modificaremos manualmente los archivos y crearemos un conflicto.
    - Cambia a la rama `yo++` en el menú desplegable de ramas de GitHub Desktop.
    - Haz clic en **Publish branch** para subir la rama `yo++`.
    - Repite el proceso para la rama `taller-info`.
+  
+##  10.1 Con GIT comandos (a pelo)Primer repositorio de GitHub
+
+Crea un repositorio público en GitHub llamado `tu-nombre-intro-git` (esto lo puedes hacer desde la interfaz web de GitHub).
+
+---
+
+## 10.2 Con GIT comandos (a pelo)Subir los cambios a GitHub
+
+Agrega el repositorio remoto de GitHub a tu proyecto local:
+
+```bash
+git remote add origin https://github.com/tu-usuario/tu-nombre-intro-git.git
+```
+
+Sube los cambios de la rama `master` a GitHub:
+
+```bash
+git push -u origin master
+```
+
+Si quieres subir las otras ramas (`yo++` y `taller-info`), usa estos comandos:
+
+```bash
+git push origin yo++
+git push origin taller-info
+```
+
