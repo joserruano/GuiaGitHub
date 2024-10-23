@@ -167,6 +167,7 @@ Este merge será un **fast-forward**(avance rápido), ya que no hay otros cambio
 ---
 
 ## 6. Merge recursive de ramas
+
 1. Permanece en la rama `master` y realiza el merge con la rama `taller-info`:
 
    ```bash
@@ -243,7 +244,7 @@ En este paso, modificaremos manualmente los archivos y crearemos un conflicto.
 
 ---
 
-## 10. Subir los cambios a GitHub con GitHub Desktop
+## 10.(OPCION A) Subir los cambios a GitHub con GitHub Desktop
 
 1. **Abrir GitHub Desktop** y añadir el repositorio local.
    - Selecciona **File > Add Local Repository**.
@@ -256,14 +257,12 @@ En este paso, modificaremos manualmente los archivos y crearemos un conflicto.
    - Cambia a la rama `yo++` en el menú desplegable de ramas de GitHub Desktop.
    - Haz clic en **Publish branch** para subir la rama `yo++`.
    - Repite el proceso para la rama `taller-info`.
-  
-##  10.1 Con GIT comandos (a pelo)Primer repositorio de GitHub
-
-Crea un repositorio público en GitHub llamado `tu-nombre-intro-git` (esto lo puedes hacer desde la interfaz web de GitHub).
 
 ---
 
-## 10.2 Con GIT comandos (a pelo)Subir los cambios a GitHub
+## 10.2 Con GIT comandos (a pelo). Subir los cambios a GitHub
+
+Crea un repositorio público en GitHub llamado `tu-nombre-intro-git` (esto lo puedes hacer desde la interfaz web de GitHub).
 
 Agrega el repositorio remoto de GitHub a tu proyecto local:
 
