@@ -260,7 +260,7 @@ En este paso, modificaremos manualmente los archivos y crearemos un conflicto.
 
 ---
 
-## 10.2 Con GIT comandos (a pelo). Subir los cambios a GitHub
+## 10.2 Con GIT comandos (A PELO). Subir los cambios a GitHub
 
 Crea un repositorio público en GitHub llamado `tu-nombre-intro-git` (esto lo puedes hacer desde la interfaz web de GitHub).
 
